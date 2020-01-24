@@ -7,8 +7,8 @@ License:        GPL3
 URL:            https://github.com/Spotifyd/spotifyd
 Source0:        https://github.com/Spotifyd/spotifyd/archive/v%{version}.zip
 
-BuildRequires:  cargo openssl-devel alsa-lib-devel pulseaudio-libs-devel systemd-rpm-macros
-Requires:       openssl pulseaudio-libs alsa-lib
+BuildRequires:  cargo openssl-devel alsa-lib-devel pulseaudio-libs-devel systemd-rpm-macros dbus-devel
+Requires:       openssl pulseaudio-libs alsa-lib dbus
 
 %description
 
