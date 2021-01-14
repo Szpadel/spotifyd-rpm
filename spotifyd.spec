@@ -14,7 +14,7 @@ Requires:       openssl pulseaudio-libs alsa-lib dbus
 
 
 %prep
-%autosetup
+%setup -n %( echo %{version} | tr '_' '-' )
 
 
 %build
