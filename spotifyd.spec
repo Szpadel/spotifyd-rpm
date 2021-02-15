@@ -1,6 +1,6 @@
 Name:           spotifyd
-Version:        0.2.25_1
-Release:        1
+Version:        0.3.0
+Release:        1%{?dist}
 Summary:        An open source Spotify client running as a UNIX daemon.
 
 License:        GPL3
@@ -14,8 +14,7 @@ Requires:       openssl pulseaudio-libs alsa-lib dbus
 
 
 %prep
-%setup -n %( echo %{version} | tr '_' '-' )
-
+%autosetup
 
 %build
 export RUSTFLAGS=-g
@@ -36,11 +35,14 @@ cp contrib/spotifyd.service %{buildroot}/%{_userunitdir}/%{name}.service
 %files
 %{_bindir}/spotifyd
 %{_userunitdir}/%{name}.service
-%license LICENCE
+%license LICENSE
 
 
 
 %changelog
+* Sun Feb 14 2021 Piotr Rogowski <piotr.rogowski@creativestyle.pl> - 0.3.0-1
+- new version
+
 * Thu Jan 14 2021 Piotr Rogowski <piotr.rogowski@creativestyle.pl> - 0.2.25_1-1
 - new version
 
