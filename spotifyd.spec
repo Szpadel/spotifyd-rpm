@@ -1,5 +1,5 @@
 Name:           spotifyd
-Version:        0.3.2
+Version:        0.3.3
 Release:        1%{?dist}
 Summary:        An open source Spotify client running as a UNIX daemon.
 
@@ -40,6 +40,9 @@ cp contrib/spotifyd.service %{buildroot}/%{_userunitdir}/%{name}.service
 
 
 %changelog
+* Thu Dec 09 2021 Piotr Rogowski <piotrekrogowski@gmail.com> - 0.3.3-1
+- new version
+
 * Sat May 01 2021 Piotr Rogowski <piotrekrogowski@gmail.com> - 0.3.2-1
 - new version
 
@@ -56,4 +59,4 @@ cp contrib/spotifyd.service %{buildroot}/%{_userunitdir}/%{name}.service
 - new version
 
 * Fri Jan 24 2020 Piotr Rogowski <piotr.rogowski@creativestyle.pl>
-- 
+-
